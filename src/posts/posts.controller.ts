@@ -26,7 +26,8 @@ export class PostsController {
     return this.postsService.getAll();
   }
 
-  getOne(id: number) {
+  @Get(':id')
+  getOne(@Param('id') id: number) {
     return this.postsService.getOne(id);
   }
 

@@ -8,7 +8,7 @@ export class Post {
   //author
 
   //images
-  @Column()
+  @Column('text', { array: true })
   images: string[];
 
   //actions

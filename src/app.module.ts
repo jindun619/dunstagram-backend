@@ -18,13 +18,13 @@ import { PostsModule } from './posts/posts.module';
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: false,
+      synchronize: true,
       logger: 'advanced-console',
     }),
     UsersModule,
     PostsModule,
   ],
-  controllers: [AppController, PostsController],
-  providers: [PostsService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
