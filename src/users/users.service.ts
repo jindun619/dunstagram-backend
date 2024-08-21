@@ -16,6 +16,7 @@ export class UsersService {
     const user = new User();
     user.name = userData.name;
     user.birthday = userData.birthday;
+    user.imageUrl = userData.imageUrl;
     return this.usersRepository.save(user);
   }
 
