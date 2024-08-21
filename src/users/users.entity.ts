@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Post } from 'src/posts/posts.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class User {
@@ -13,4 +14,7 @@ export class User {
 
   @Column()
   imageUrl: string;
+
+  @OneToMany(() => Post, (post) => post.id)
+  posts: Post[];
 }

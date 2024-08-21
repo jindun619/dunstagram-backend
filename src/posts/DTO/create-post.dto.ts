@@ -1,9 +1,10 @@
-import { ArrayMinSize, IsArray, IsString } from 'class-validator';
+import { ArrayMinSize, IsArray, IsNumber, IsString } from 'class-validator';
+import { User } from 'src/users/users.entity';
 
 export class CreatePostDTO {
-  //author
+  @IsNumber()
+  readonly authorId: number;
 
-  //images
   @IsArray()
   @IsString({ each: true })
   @ArrayMinSize(1)
@@ -11,11 +12,9 @@ export class CreatePostDTO {
 
   //actions
 
-  //content
   @IsString()
   readonly content: string;
 
-  //date
   @IsString()
   readonly date: string;
 }

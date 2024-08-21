@@ -7,7 +7,6 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import { PostsService } from './posts.service';
 import { CreatePostDTO } from './DTO/create-post.dto';
 import { UpdatePostDTO } from './DTO/update-post.dto';
