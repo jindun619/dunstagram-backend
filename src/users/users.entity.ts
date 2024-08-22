@@ -15,6 +15,6 @@ export class User {
   @Column()
   imageUrl: string;
 
-  @OneToMany(() => Post, (post) => post.id)
+  @OneToMany(() => Post, (post) => post.id, { onDelete: 'CASCADE' })
   posts: Post[];
 }

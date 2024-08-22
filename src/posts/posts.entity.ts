@@ -6,14 +6,12 @@ export class Post {
   @PrimaryGeneratedColumn()
   id: number;
 
-  //author
-  @ManyToOne(() => User, (user) => user.posts)
+  @ManyToOne(() => User, (user) => user.posts, { cascade: true })
   User: User;
 
   @Column()
   authorId: number;
 
-  //images
   @Column('text', { array: true })
   images: string[];
 
