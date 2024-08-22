@@ -13,7 +13,7 @@ export class User {
   birthday: string;
 
   @Column()
-  imageUrl: string;
+  profileImage: string;
 
   @OneToMany(() => Post, (post) => post.id, { onDelete: 'CASCADE' })
   posts: Post[];

@@ -8,5 +8,5 @@ export class CreateUserDTO {
   readonly birthday: string;
 
   @IsString()
-  readonly imageUrl: string;
+  readonly profileImage: string;
 }
