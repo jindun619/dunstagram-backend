@@ -1,5 +1,4 @@
 import { ArrayMinSize, IsArray, IsNumber, IsString } from 'class-validator';
-import { User } from 'src/users/users.entity';
 
 export class CreatePostDTO {
   @IsNumber()
@@ -10,7 +9,11 @@ export class CreatePostDTO {
   @ArrayMinSize(1)
   readonly images: string[];
 
-  //actions
+  @IsNumber()
+  readonly likes: number;
+
+  @IsNumber()
+  readonly shares: number;
 
   @IsString()
   readonly content: string;

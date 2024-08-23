@@ -4,6 +4,9 @@ export class createCommentDTO {
   @IsNumber()
   authorId: number;
 
+  @IsNumber()
+  postId: number;
+
   @IsString()
   content: string;
 
